@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3943469515810347908}
   - component: {fileID: 3943469515810347904}
   m_Layer: 0
-  m_Name: 2
+  m_Name: 2p
   m_TagString: Shape
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

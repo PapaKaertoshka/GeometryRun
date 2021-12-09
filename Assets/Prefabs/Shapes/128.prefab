@@ -231,6 +231,7 @@ GameObject:
   - component: {fileID: 7487758854593841285}
   - component: {fileID: 272566650188759292}
   - component: {fileID: -473509172239779182}
+  - component: {fileID: -2173144727528672878}
   m_Layer: 0
   m_Name: 128
   m_TagString: Shape
@@ -279,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e0ddf14a6dd19748a966cc476e2c1ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typeNow: 6
   types:
   - {fileID: 6338412193762910539, guid: e13b473aaf41b1442aa90a54586633bc, type: 3}
   - {fileID: 897191206543667836, guid: 673699df31a18734393054ed1cacfb2d, type: 3}
@@ -292,3 +292,20 @@ MonoBehaviour:
   - {fileID: 8432925148985925129, guid: 4b645c9d5f547fb41b5a10bd03823832, type: 3}
   - {fileID: 4588328743046502775, guid: 7e21e5cfa28bf394daf40c3876ee709c, type: 3}
   - {fileID: 538324225986973398, guid: c44babd626271d1448475115c8a2417f, type: 3}
+  typeNow: 6
+--- !u!54 &-2173144727528672878
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5137168018797939090}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

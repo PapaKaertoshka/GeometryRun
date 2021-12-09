@@ -2,26 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : Shapes
+public class Player : MonoBehaviour
 {
     
     [SerializeField] private GameObject[] types;
+    [SerializeField] public int type, typeNow;
+    [SerializeField] private PlayerShape playerShape;
     public void Start()
     {
-        //typeNow = 0;
+        typeNow = 0;
         types[typeNow].SetActive(true);
+        if (types[typeNow].TryGetComponent(out PlayerShape ps)) playerShape = ps;
     }
-    public void OnCollisionEnter(Collision collision)
+    public void Update()
     {
-        if (collision.gameObject.tag == "Shape")
+        if(type != typeNow)
         {
-            if(collision.gameObject.GetType() == gameObject.GetType())
-            {
-                typeNow++;
-                collision.gameObject.SetActive(false);
-                types[typeNow].SetActive(true);
-                types[typeNow - 1].SetActive(false);
-            }
+            types[type].SetActive(false);
+            types[typeNow].SetActive(true);
+            type = typeNow;
         }
     }
+
 }
