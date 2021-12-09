@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerShape playerShape;
     public void Start()
     {
-        typeNow = 0;
         types[typeNow].SetActive(true);
         if (types[typeNow].TryGetComponent(out PlayerShape ps)) playerShape = ps;
     }
