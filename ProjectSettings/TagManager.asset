@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shape
   - Obstacle
+  - Wall
+  - Tube
   layers:
   - Default
   - TransparentFX

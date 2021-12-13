@@ -23,6 +23,21 @@ public class PlayerShape : MonoBehaviour
                 }
             }
         }
+        if(collision.gameObject.tag == "Wall")
+        {
+            if (collision.gameObject.TryGetComponent(out Wall wall))
+            {
+                if (typeNow - wall.type > 0)
+                {
+                    mainShape.typeNow-=wall.type;
+                    Destroy(collision.gameObject);
+                }
+                else if (typeNow - wall.type <= 0)
+                {
+                    SceneManager.LoadScene("Main");
+                }
+            }
+        }
     }
     public void OnTriggerEnter(Collider other)
     {
