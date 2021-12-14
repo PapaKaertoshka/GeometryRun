@@ -6,8 +6,17 @@ public class Player : MonoBehaviour
 {
     
     [SerializeField] private GameObject[] types;
+    [SerializeField] private bool invincibility;
     [SerializeField] public int type, typeNow;
     [SerializeField] private PlayerShape playerShape;
+    public bool GetInv()
+    {
+        return invincibility;
+    }
+    public void SetInv(bool inv)
+    {
+        invincibility = inv;
+    }
     public void Start()
     {
         types[typeNow].SetActive(true);

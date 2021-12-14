@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class PlayerShape : MonoBehaviour
 {
     [SerializeField] public int typeNow;
+    public GameObject[] shapes;
     [SerializeField] private Shape otherShape;
     [SerializeField] private Player mainShape;
-
+    IEnumerator Invincibility()
+    {
+        mainShape.SetInv(true);
+        yield return new WaitForSeconds(3f);
+        mainShape.SetInv(false);
+    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Shape")
@@ -41,13 +47,19 @@ public class PlayerShape : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Obstacle")
+        if(other.gameObject.tag == "Obstacle" && mainShape.GetInv() == false)
         {
             mainShape.typeNow--;
-            if(mainShape.typeNow < 0)
+            StartCoroutine(Invincibility());
+            if (mainShape.typeNow < 0)
             {
                 SceneManager.LoadScene("Main");
             }
+        }
+        if(other.gameObject.tag == "Tube" && mainShape.GetInv() == false){
+            mainShape.typeNow--;
+            Instantiate(shapes[mainShape.typeNow]);
+            StartCoroutine(Invincibility());
         }
     }
 }
