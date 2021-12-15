@@ -58,7 +58,7 @@ public class PlayerShape : MonoBehaviour
         }
         if(other.gameObject.tag == "Tube" && mainShape.GetInv() == false){
             mainShape.typeNow--;
-            Instantiate(shapes[mainShape.typeNow]);
+            Instantiate(shapes[mainShape.typeNow], new Vector3(transform.position.x - transform.localScale.x, transform.position.y,transform.position.z-0.5f), Quaternion.identity);
             StartCoroutine(Invincibility());
         }
     }
