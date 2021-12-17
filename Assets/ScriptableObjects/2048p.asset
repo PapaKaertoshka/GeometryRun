@@ -15,3 +15,4 @@ MonoBehaviour:
   <Mesh>k__BackingField: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
   <Material>k__BackingField: {fileID: 2100000, guid: 2836e89f901d1a34f8a2ac2fd757c9ba, type: 2}
   <Scale>k__BackingField: {x: 3.2, y: 3.2, z: 3.2}
+  <Text>k__BackingField: 2048

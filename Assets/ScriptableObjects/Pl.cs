@@ -23,6 +23,12 @@ public class Pl : ScriptableObject
         get;
         private set;
     }
+    [field: SerializeField]
+    public string Text
+    {
+        get;
+        private set;
+    }
 
 }
 

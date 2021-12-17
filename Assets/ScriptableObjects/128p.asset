@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4dc5f0d51c619a4abf02bd2fefca16d, type: 3}
   m_Name: 128p
   m_EditorClassIdentifier: 
-  <Mesh>k__BackingField: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-  <Material>k__BackingField: {fileID: 0}
-  <Scale>k__BackingField: {x: 1.9, y: 1.9, z: 1.9}
+  <Mesh>k__BackingField: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  <Material>k__BackingField: {fileID: 2100000, guid: 940e25f006281c64598e36adfadb9149, type: 2}
+  <Scale>k__BackingField: {x: 2.2, y: 2.2, z: 2.2}
+  <Text>k__BackingField: 128
