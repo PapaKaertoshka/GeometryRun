@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2341240292432844847}
   - component: {fileID: 7778352818464508382}
   - component: {fileID: -375734637731194454}
+  - component: {fileID: -6780045449142899232}
   m_Layer: 0
   m_Name: 64p
   m_TagString: Shape
@@ -30,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 6040274243539312535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,11 +100,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotOffset: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  width1: 2.4
-  length1: 2.4
+  width1: 1
+  length1: 1
   width2: 0.00001
   length2: 0.00001
-  height: 2.4
+  height: 1
   widthSegs: 2
   lengthSegs: 2
   heightSegs: 6
@@ -123,7 +124,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.4, y: 2.4, z: 2.4}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &-375734637731194454
 Rigidbody:
@@ -141,3 +142,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6780045449142899232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6040274243539312535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0ddf14a6dd19748a966cc476e2c1ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeNow: 5

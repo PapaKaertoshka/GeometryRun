@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223267655152702095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140049190798396703}
@@ -97,11 +97,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotOffset: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  width1: 2
-  length1: 2
+  width1: 1
+  length1: 1
   width2: 0.00001
   length2: 0.00001
-  height: 2
+  height: 1
   widthSegs: 2
   lengthSegs: 2
   heightSegs: 4
@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 1140049190798396703}
   - component: {fileID: 4982851997986415653}
   - component: {fileID: 6704888320255718659}
+  - component: {fileID: 1648832292783083968}
   m_Layer: 0
   m_Name: 256p
   m_TagString: Shape
@@ -137,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 3026213451812442484}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.1, y: 2.1, z: 2.1}
   m_Children:
   - {fileID: 6479316121581988802}
   - {fileID: 3253552609223147130}
@@ -155,8 +156,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 3, z: 1.5}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &6704888320255718659
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -173,6 +174,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1648832292783083968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026213451812442484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e0ddf14a6dd19748a966cc476e2c1ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeNow: 7
 --- !u!1 &4782118091734727455
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +214,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4782118091734727455}
   m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1140049190798396703}
@@ -270,11 +284,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotOffset: {x: 0, y: 0, z: 0}
   rotation: {x: 0, y: 0, z: 0}
-  width1: 2
-  length1: 2
+  width1: 1
+  length1: 1
   width2: 0.00001
   length2: 0.00001
-  height: 2
+  height: 1
   widthSegs: 2
   lengthSegs: 2
   heightSegs: 4

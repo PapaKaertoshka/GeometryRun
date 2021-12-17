@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Shape : MonoBehaviour
 {
-    [SerializeField] private GameObject[] types;
+//    [SerializeField] private GameObject[] types;
     [SerializeField] public int typeNow;
 /*    [SerializeField] private Shape otherShape;*/
 /*    public void OnCollisionEnter(Collision collision)
