@@ -50,8 +50,8 @@ public class Movement : MonoBehaviour
             if (player.typeNow != finalStare.typeNow)
             {
                 move = false;
-                transform.DOMove(other.transform.position,1f);
-                transform.DOJump(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z + 6), 3f, 1, 1f);
+                transform.DOMove(other.transform.position,0.2f);
+                transform.DOJump(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z + 6), 2f, 1, 0.5f);
             } else if (player.typeNow == finalStare.typeNow)
             {
                 text.SetActive(true);
