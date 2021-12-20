@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class Movement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Movement : MonoBehaviour
     private bool _isMoving = true;
     private float _deltaMouseX = 0f;
     private float _prevMouseX = 0f;
+    [SerializeField] private GameObject text;
     void Strat()
     {
         move = true;
@@ -40,7 +42,22 @@ public class Movement : MonoBehaviour
         }
 
     }
-
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.TryGetComponent(out FinalStare finalStare))
+        {
+            TryGetComponent(out Player player);
+            if (player.typeNow != finalStare.typeNow)
+            {
+                move = false;
+                transform.DOMove(other.transform.position,1f);
+                transform.DOJump(new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z + 6), 3f, 1, 1f);
+            } else if (player.typeNow == finalStare.typeNow)
+            {
+                text.SetActive(true);
+            }
+        }
+    }
     public bool move
     {
         get { return _isMoving; }

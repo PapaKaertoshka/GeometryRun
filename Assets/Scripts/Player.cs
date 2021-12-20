@@ -70,13 +70,6 @@ public class Player : MonoBehaviour
             Instantiate(shapes[typeNow], new Vector3(transform.position.x + transform.localScale.x, transform.position.y, transform.position.z - 0.2f), Quaternion.identity);
             StartCoroutine(Invincibility());
         }
-        if(other.gameObject.TryGetComponent(out FInalStare finalStare))
-        {
-            if(typeNow != finalStare.typeNow) 
-            {
-                transform.DOJump(new Vector3(transform.position.x,transform.position.y+1f,transform.position.z+6), 3f, 1 ,1f);
-            }
-        }
     }
     public void Update()
     {
