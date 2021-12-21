@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Wall
   - Tube
+  - Crystal
   layers:
   - Default
   - TransparentFX

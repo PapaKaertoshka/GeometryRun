@@ -6,13 +6,8 @@ public class Counter : MonoBehaviour
 {
     public int _counter;
     public TextMeshProUGUI txt;
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if(other.gameObject.TryGetComponent(out Crystals crystal))
-        {
-            _counter++;
-            txt.text = _counter.ToString();
-            Destroy(other.gameObject);
-        }
+        txt.text = _counter.ToString();
     }
 }

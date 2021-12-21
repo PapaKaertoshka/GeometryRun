@@ -41,12 +41,12 @@ public class Player : MonoBehaviour
         {
             if (collision.gameObject.TryGetComponent(out Wall wall))
             {
-                if (typeNow - wall.type > 0)
+                if (typeNow - wall.type >= 0)
                 {
                     typeNow -= wall.type;
                     Destroy(collision.gameObject);
                 }
-                else if (typeNow - wall.type <= 0)
+                else if (typeNow - wall.type < 0)
                 {
                     SceneManager.LoadScene("Main");
                 }
