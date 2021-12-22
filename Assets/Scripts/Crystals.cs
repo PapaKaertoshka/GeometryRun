@@ -17,7 +17,7 @@ public class Crystals : MonoBehaviour
     {
         if(other.gameObject.TryGetComponent(out Player player))
         {
-            transform.DOMove(new Vector3(crystals.position.x,crystals.position.y,crystals.position.z + 8), 0.5f);
+            transform.DOMove(new Vector3(crystals.position.x,crystals.position.y,crystals.position.z + 3), 0.5f);
             transform.DOScale(crystals.transform.lossyScale, 0.1f);
             StartCoroutine(Waiting());
         }
