@@ -26,15 +26,12 @@ public class Player : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Shape")
+        if (collision.gameObject.TryGetComponent(out Shape shape))
         {
-            if (collision.gameObject.TryGetComponent(out Shape shape))
+            if (shape.typeNow == typeNow)
             {
-                if (shape.typeNow == typeNow)
-                {
-                    typeNow++;
-                    Destroy(collision.gameObject);
-                }
+                typeNow++;
+                Destroy(collision.gameObject);
             }
         }
         if (collision.gameObject.tag == "Wall")
@@ -55,16 +52,16 @@ public class Player : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Obstacle" && invincibility == false)
+        if ((other.gameObject.tag == "Obstacle" || other.gameObject.tag == "Tube") && invincibility == false)
         {
-            typeNow--;
             StartCoroutine(Invincibility());
+            typeNow--;
             if (typeNow < 0)
             {
                 SceneManager.LoadScene("Main");
             }
         }
-        if (other.gameObject.tag == "Tube" && invincibility == false)
+        if (other.gameObject.TryGetComponent(out Saw saw) && invincibility == false)
         {
             typeNow--;
             Instantiate(shapes[typeNow], new Vector3(transform.position.x + transform.localScale.x, transform.position.y, transform.position.z - 0.2f), Quaternion.identity);

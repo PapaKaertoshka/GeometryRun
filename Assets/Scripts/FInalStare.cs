@@ -5,4 +5,5 @@ using UnityEngine;
 public class FinalStare : MonoBehaviour
 {
     public int typeNow;
+    public float multiple;
 }

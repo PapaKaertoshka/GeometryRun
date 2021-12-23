@@ -5,8 +5,8 @@ using DG.Tweening;
 
 public class Crystals : MonoBehaviour
 {
-    [SerializeField] private Transform crystals;
-    [SerializeField] private Counter text;
+    [SerializeField] public Transform crystals;
+    [SerializeField] public Counter text;
     private IEnumerator Waiting()
     {
         yield return new WaitForSeconds(0.6f);
